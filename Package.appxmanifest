@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
+  xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+  xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
+  IgnorableNamespaces="uap mp uap3 iot uap4 uap6">
+
+  <Identity
+    Name="92bf3ade-4c55-4969-a5a1-279323f805b4"
+    Publisher="CN=lmessias"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="92bf3ade-4c55-4969-a5a1-279323f805b4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>SkilsSymphony</DisplayName>
+    <PublisherDisplayName>lmessias</PublisherDisplayName>
+    <Logo>Assets\logo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="SkilsSymphony.App">
+      <uap:VisualElements
+        DisplayName="SkilsSymphony"
+        Square150x150Logo="Assets\logo.png"
+        Square44x44Logo="Assets\logo.png"
+        Description="SkilsSymphony"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square150x150Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\logo.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
+        <uap:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\logo.png"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <uap3:Capability Name="userNotificationListener"/>
+    <Capability Name="internetClientServer"/>
+    <uap:Capability Name="userAccountInformation"/>
+    <iot:Capability Name="systemManagement"/>
+    <uap4:Capability Name="offlineMapsManagement"/>
+    <uap:Capability Name="contacts"/>
+    <uap:Capability Name="sharedUserCertificates"/>
+    <uap6:Capability Name="graphicsCapture"/>
+    <uap:Capability Name="chat"/>
+    <Capability Name="allJoyn"/>
+    <DeviceCapability Name="location"/>
+  </Capabilities>
+</Package>
